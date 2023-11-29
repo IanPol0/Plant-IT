@@ -12,7 +12,7 @@ namespace COPIA
     {
         private bool IsClosed = false;
         private string datos = "";
-        private static bool Wifi = true;
+        private static bool Wifi = false;
         private bool wifiAbierto;
         private SerialPort Port = new SerialPort();
        
@@ -127,20 +127,24 @@ namespace COPIA
         #region TEXT CHANGED EVENTS
         private void txtSerial_TextChanged(object sender, EventArgs e)
         {
-            if (txtSerial.Text.Length == 57)
+            try
             {
-                int num = Convert.ToInt32(txtSerial.Text[14].ToString());
-                int index = num - 1;
-                int humedad = Convert.ToInt32(txtSerial.Text.Substring(35, 2));
-                int luz = Convert.ToInt32(txtSerial.Text.Substring(54, 2));
-                string estadoHumedad = SetEstadoMaceta(Planta.rango_HumedadRecomendada[index, 0], Planta.rango_HumedadRecomendada[index, 1], humedad);
-                string estadoLuz = SetEstadoMaceta(Planta.rango_LuzRecomendada[index, 0], Planta.rango_LuzRecomendada[index, 1], luz);
+                if (txtSerial.Text.Length == 57)
+                {
+                    int num = 1;
+                    int index = num - 1;
+                    int humedad = Convert.ToInt32(txtSerial.Text.Substring(35, 2));
+                    int luz = Convert.ToInt32(txtSerial.Text.Substring(54, 2));
+                    string estadoHumedad = SetEstadoMaceta(Planta.rango_HumedadRecomendada[index, 0], Planta.rango_HumedadRecomendada[index, 1], humedad);
+                    string estadoLuz = SetEstadoMaceta(Planta.rango_LuzRecomendada[index, 0], Planta.rango_LuzRecomendada[index, 1], luz);
 
-                Maceta.InsertarRegistro(humedad, luz, estadoHumedad, estadoLuz, num);
-                Maceta.UpdateUltimoRegistro(humedad, luz, estadoHumedad, estadoLuz, num);
-                Maceta.ActualizarVariables();
-                //EnviarNotificaciones(index); 
+                    Maceta.InsertarRegistro(humedad, luz, estadoHumedad, estadoLuz, num);
+                    Maceta.UpdateUltimoRegistro(humedad, luz, estadoHumedad, estadoLuz, num);
+                    Maceta.ActualizarVariables();
+                    EnviarNotificaciones(index);
+                }
             }
+            catch(FormatException a) { MessageBox.Show(a.Message); }
         }
         #endregion
 

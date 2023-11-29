@@ -42,7 +42,7 @@ void enviodatos() {
   Serial.write(mystr,6); //Write the serial data
   //Serial.write(13);
   Serial.println();
-  delay(10000);
+  delay(2000);
 }
 
 void sensorLuz(){
@@ -72,16 +72,16 @@ const int sensorH = A5;  //Hygrometer sensor analog pin output at pin A0 of Ardu
 humedad = analogRead(sensorH); 
 humedad = constrain(humedad, 400, 1023);  //Keep the ranges!
 humedad = map(humedad, 1023, 400,10,99);  //Map humedad : 400 will be 100 and 1023 will be 0 
-
+//Serial.println(humedad);
 if (humedad < 30) 
 {
    estadoHumedad = "Bajo";
 } 
-else if (humedad < 70) 
+else if (humedad < 50) 
 {
     estadoHumedad = "Normal";
 } 
-else if (humedad > 70) 
+else if (humedad < 100) 
 {
     estadoHumedad = "Alto";
 } 

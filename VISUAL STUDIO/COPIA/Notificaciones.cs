@@ -45,9 +45,11 @@ namespace COPIA
                 string hora = Maceta.hora[index] == "0" ? "" : $"({Maceta.hora[index]})";
                 
                 string mensajeNotificacion = $"Hola, su planta '{Planta.nombre[index]}' {mensaje} {hora}";
-                
-                await client.GetStringAsync($"https://platform.clickatell.com/messages/http/send?apiKey=Cia4vWC5TgSwdrQ6v8CH0Q==&to={Usuario.Telefono}&content={mensajeNotificacion}");
-                
+
+                await client.GetStringAsync($"https://platform.clickatell.com/messages/http/send?apiKey=VAL3Ufa_S6mpiQDuDSE7AA==&to={Usuario.Telefono}&content={mensajeNotificacion}");
+                //await client.GetStringAsync($"https://platform.clickatell.com/messages/http/send?apiKey=Cia4vWC5TgSwdrQ6v8CH0Q==&to={Usuario.Telefono}&content={mensajeNotificacion}");
+
+
             }
         }
 

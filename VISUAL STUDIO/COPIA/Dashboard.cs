@@ -22,7 +22,6 @@ namespace COPIA
         private double[] luzColumnChart = new double[6];
         private Button btnActivoLineChart;
         private Button previoBtnActivoLineChart;
-        private Button btnActivoColumnChart;
         private bool formLoad;
         private List<Label> listaLabels;
         private List<Button> listaBotones;
@@ -86,16 +85,15 @@ namespace COPIA
                         break;
 
                 }
+            
+                string fechaComienzo = $"1/{mes}/2022";
+                string fechaFinal = $"{diaFinal}/{mes}/2022";
 
-                string fechaComienzo = $"1/{mes}/2021";
-                string fechaFinal = $"{diaFinal}/{mes}/2021";
-
-                
-                comando.CommandText = $"select Humedad, Luz from Maceta where IDPlanta={IDPlanta} and Id>3 and Fecha between #{fechaComienzo:MM/dd/yyyy}# and #{fechaFinal:MM/dd/yyyy}#";
+                comando.CommandText = $"select Humedad, Luz from Maceta where IDPlanta={IDPlanta} and Id>3 and Fecha between #{fechaComienzo:dd/MM/yyyy}# and #{fechaFinal:dd/MM/yyyy}#";
                 OleDbDataReader reader = comando.ExecuteReader();
 
-                List<double> humedadMensual = new List<double>();
-                List<double> luzMensual = new List<double>();
+                List<double> humedadMensual = new();
+                List<double> luzMensual = new();
 
                 while (reader.Read())
                 {
@@ -132,7 +130,7 @@ namespace COPIA
         {
             foreach (var serie in columnChart.Series)
             {
-                serie.Points.Clear();
+                serie.Points.Clear();   
             }
 
             string mesComienzo = DateTime.Now.ToShortDateString();
@@ -145,8 +143,8 @@ namespace COPIA
             {
                 columnChart.Series[0].Points.AddXY(meses[numeroMes], humedadColumnChart[i]);
                 columnChart.Series[1].Points.AddXY(meses[numeroMes], luzColumnChart[i]);
-
-                if (numeroMes == 12)
+                
+                if (numeroMes == 11)
                     numeroMes = 1;
                 else
                     numeroMes++;
@@ -155,17 +153,8 @@ namespace COPIA
             columnChart.ChartAreas[0].Visible = true;
         }
 
-        private void CambiarMedicionColumnChart(Button boton)
+        private void CambiarMedicionColumnChart()
         {
-            if (btnActivoColumnChart != boton)
-            {
-                btnActivoColumnChart.BackColor = Color.Transparent;
-                btnActivoColumnChart.FlatAppearance.MouseOverBackColor = Color.Transparent;
-                btnActivoColumnChart = boton;
-            }
-            boton.BackColor = Color.DeepSkyBlue;
-            boton.FlatAppearance.MouseOverBackColor = boton.BackColor;
-
             VariablesColumnChart(ListaPlantas.numeroPlanta);
             GenerarColumnChart();
         }
@@ -313,16 +302,6 @@ namespace COPIA
         {
             CambiarIntervaloLineChart(btnMax);
         }
-
-        private void btnHumedad_Click(object sender, EventArgs e)
-        {
-            CambiarMedicionColumnChart(btnHumedad);
-        }
-
-        private void btnLuz_Click(object sender, EventArgs e)
-        {
-            CambiarMedicionColumnChart(btnLuz);
-        }
         #endregion
 
         #region FORM LOAD
@@ -330,14 +309,13 @@ namespace COPIA
         {
             valoresProgressBar();
             formLoad = true;
-            btnActivoColumnChart = btnHumedad;
-            CambiarMedicionColumnChart(btnHumedad);
+            CambiarMedicionColumnChart();
             previoBtnActivoLineChart = btnMax;
             btnActivoLineChart = btnMax;
             CambiarIntervaloLineChart(btnMax);
             formLoad = false;
             listaLabels = new List<Label>() { lblHumedad, lblLuz };
-            listaBotones = new List<Button>() { btn1Dia, btn3Dias, btn7Dias, btn1Mes, btnMax, btnHumedad, btnLuz };
+            listaBotones = new List<Button>() { btn1Dia, btn3Dias, btn7Dias, btn1Mes, btnMax };
             Fuente.CambiarFuente(listaLabels, listaBotones);
         }
         #endregion

@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Data.OleDb;
+using System.Drawing;
+using System.Drawing.Text;
 
 namespace COPIA
 {
@@ -21,44 +23,48 @@ namespace COPIA
         #region FUNCIONES
         public static void ActualizarObjetos()
         {
-            for (int index = 0; index < 3; index++)
+            for (int i = 0; i < 3; i++)
             {
-                lblNombre[index].Text = Planta.nombre[index];
+                lblNombre[i].Font = new Font("Comfortaa", 28.2f);
+                lblHumedad[i].Font = new Font("Comfortaa", 13.8f);
+                lblLuz[i].Font = new Font("Comfortaa", 13.8f);
 
-                lblHumedad[index].Text = Maceta.humedad[index] != 0 ? "Humedad: " + Maceta.humedad[index] + "% " + Maceta.estadoHumedad[index] : "Humedad: --";
-                lblLuz[index].Text = Maceta.luz[index] != 0 ? "Luz: " + Maceta.luz[index] + "% " + Maceta.estadoLuz[index] : "Luz: --";
+                lblNombre[i].Text = Planta.nombre[i];
+                lblHumedad[i].Text = Maceta.humedad[i] != 0 ? "Humedad: " + Maceta.humedad[i] + "% " + Maceta.estadoHumedad[i] : "Humedad: --";
+                lblLuz[i].Text = Maceta.luz[i] != 0 ? "Luz: " + Maceta.luz[i] + "% " + Maceta.estadoLuz[i] : "Luz: --";
+           
 
-                switch (Planta.IDFamilia[index])
+                switch (Planta.IDFamilia[i])
                 {
                     case 0:
-                        pictureBoxes[index].BackgroundImage = null;
+                        pictureBoxes[i].BackgroundImage = null;
                         break;
                     case 1:
-                        pictureBoxes[index].BackgroundImage = Properties.Resources.BotonBonsai;
+                        pictureBoxes[i].BackgroundImage = Properties.Resources.BotonBonsai;
                         break;
                     case 2:
-                        pictureBoxes[index].BackgroundImage = Properties.Resources.BotonCactus;
+                        pictureBoxes[i].BackgroundImage = Properties.Resources.BotonCactus;
                         break;
                     case 3:
-                        pictureBoxes[index].BackgroundImage = Properties.Resources.BotonFlor;
+                        pictureBoxes[i].BackgroundImage = Properties.Resources.BotonFlor;
                         break;
                     case 4:
-                        pictureBoxes[index].BackgroundImage = Properties.Resources.BotonPasto;
+                        pictureBoxes[i].BackgroundImage = Properties.Resources.BotonPasto;
                         break;
                     case 5:
-                        pictureBoxes[index].BackgroundImage = Properties.Resources.BotonSuculenta;
+                        pictureBoxes[i].BackgroundImage = Properties.Resources.BotonSuculenta;
                         break;
                     case 6:
-                        pictureBoxes[index].BackgroundImage = null;
+                        pictureBoxes[i].BackgroundImage = null;
                         break;
                 }
 
-                bool cambio = Planta.IDFamilia[index] != 0;
+                bool cambio = Planta.IDFamilia[i] != 0;
 
-                btnAgregar[index].Visible = !cambio;
-                btnInfo[index].Visible = cambio;
-                btnEdit[index].Visible = cambio;
-                btnBorrar[index].Visible = cambio;
+                btnAgregar[i].Visible = !cambio;
+                btnInfo[i].Visible = cambio;
+                btnEdit[i].Visible = cambio;
+                btnBorrar[i].Visible = cambio;
             }
         }
 

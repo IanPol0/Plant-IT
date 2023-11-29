@@ -13,7 +13,11 @@ namespace COPIA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ListaPlantas());
+            try
+            {
+                Application.Run(new ListaPlantas());
+            }
+            catch (ArgumentException) { }
         }
     }
 }

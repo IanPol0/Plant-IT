@@ -68,11 +68,11 @@ namespace COPIA
             // 
             this.lblNombre1.AutoSize = true;
             this.lblNombre1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.lblNombre1.Font = new System.Drawing.Font("Comfortaa", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblNombre1.Location = new System.Drawing.Point(225, 187);
             this.lblNombre1.Name = "lblNombre1";
-            this.lblNombre1.Size = new System.Drawing.Size(210, 62);
+            this.lblNombre1.Size = new System.Drawing.Size(155, 51);
             this.lblNombre1.TabIndex = 11;
             this.lblNombre1.Text = "Planta 1";
             this.lblNombre1.UseCompatibleTextRendering = true;
@@ -81,10 +81,10 @@ namespace COPIA
             // 
             this.lblNombre2.AutoSize = true;
             this.lblNombre2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.lblNombre2.Font = new System.Drawing.Font("Comfortaa", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre2.Location = new System.Drawing.Point(220, 360);
+            this.lblNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre2.Location = new System.Drawing.Point(220, 372);
             this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(235, 78);
+            this.lblNombre2.Size = new System.Drawing.Size(159, 44);
             this.lblNombre2.TabIndex = 21;
             this.lblNombre2.Text = "Planta 2";
             // 
@@ -92,10 +92,10 @@ namespace COPIA
             // 
             this.lblNombre3.AutoSize = true;
             this.lblNombre3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.lblNombre3.Font = new System.Drawing.Font("Comfortaa", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre3.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre3.Location = new System.Drawing.Point(220, 550);
             this.lblNombre3.Name = "lblNombre3";
-            this.lblNombre3.Size = new System.Drawing.Size(235, 78);
+            this.lblNombre3.Size = new System.Drawing.Size(159, 44);
             this.lblNombre3.TabIndex = 22;
             this.lblNombre3.Text = "Planta 3";
             // 
@@ -103,10 +103,10 @@ namespace COPIA
             // 
             this.lblHumedad1.AutoSize = true;
             this.lblHumedad1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.lblHumedad1.Font = new System.Drawing.Font("Comfortaa", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHumedad1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHumedad1.Location = new System.Drawing.Point(230, 240);
             this.lblHumedad1.Name = "lblHumedad1";
-            this.lblHumedad1.Size = new System.Drawing.Size(171, 39);
+            this.lblHumedad1.Size = new System.Drawing.Size(116, 24);
             this.lblHumedad1.TabIndex = 13;
             this.lblHumedad1.Text = "Humedad: --";
             // 
@@ -114,10 +114,10 @@ namespace COPIA
             // 
             this.lblHumedad2.AutoSize = true;
             this.lblHumedad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.lblHumedad2.Font = new System.Drawing.Font("Comfortaa", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHumedad2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHumedad2.Location = new System.Drawing.Point(230, 430);
             this.lblHumedad2.Name = "lblHumedad2";
-            this.lblHumedad2.Size = new System.Drawing.Size(171, 39);
+            this.lblHumedad2.Size = new System.Drawing.Size(116, 24);
             this.lblHumedad2.TabIndex = 17;
             this.lblHumedad2.Text = "Humedad: --";
             // 
@@ -125,10 +125,10 @@ namespace COPIA
             // 
             this.lblHumedad3.AutoSize = true;
             this.lblHumedad3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.lblHumedad3.Font = new System.Drawing.Font("Comfortaa", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHumedad3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHumedad3.Location = new System.Drawing.Point(230, 620);
             this.lblHumedad3.Name = "lblHumedad3";
-            this.lblHumedad3.Size = new System.Drawing.Size(171, 39);
+            this.lblHumedad3.Size = new System.Drawing.Size(116, 24);
             this.lblHumedad3.TabIndex = 18;
             this.lblHumedad3.Text = "Humedad: --";
             // 
@@ -136,10 +136,10 @@ namespace COPIA
             // 
             this.lblLuz2.AutoSize = true;
             this.lblLuz2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.lblLuz2.Font = new System.Drawing.Font("Comfortaa", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLuz2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLuz2.Location = new System.Drawing.Point(500, 430);
             this.lblLuz2.Name = "lblLuz2";
-            this.lblLuz2.Size = new System.Drawing.Size(91, 39);
+            this.lblLuz2.Size = new System.Drawing.Size(62, 24);
             this.lblLuz2.TabIndex = 25;
             this.lblLuz2.Text = "Luz: --";
             // 
@@ -147,10 +147,10 @@ namespace COPIA
             // 
             this.lblLuz1.AutoSize = true;
             this.lblLuz1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.lblLuz1.Font = new System.Drawing.Font("Comfortaa", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLuz1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLuz1.Location = new System.Drawing.Point(500, 240);
             this.lblLuz1.Name = "lblLuz1";
-            this.lblLuz1.Size = new System.Drawing.Size(91, 39);
+            this.lblLuz1.Size = new System.Drawing.Size(62, 24);
             this.lblLuz1.TabIndex = 26;
             this.lblLuz1.Text = "Luz: --";
             // 
@@ -158,10 +158,10 @@ namespace COPIA
             // 
             this.lblLuz3.AutoSize = true;
             this.lblLuz3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.lblLuz3.Font = new System.Drawing.Font("Comfortaa", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLuz3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLuz3.Location = new System.Drawing.Point(500, 620);
             this.lblLuz3.Name = "lblLuz3";
-            this.lblLuz3.Size = new System.Drawing.Size(91, 39);
+            this.lblLuz3.Size = new System.Drawing.Size(62, 24);
             this.lblLuz3.TabIndex = 20;
             this.lblLuz3.Text = "Luz: --";
             // 
@@ -521,7 +521,7 @@ namespace COPIA
             this.BackColor = System.Drawing.Color.Aquamarine;
             this.BackgroundImage = global::COPIA.Properties.Resources.FondoForm1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.lblHumedad3);
             this.Controls.Add(this.lblHumedad2);
             this.Controls.Add(this.btn_ConfiguracionNotificaciones);
@@ -553,6 +553,7 @@ namespace COPIA
             this.Controls.Add(this.btn_RecibirDatos);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1364, 726);

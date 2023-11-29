@@ -22,7 +22,7 @@ namespace COPIA
             comando.ExecuteNonQuery();
             comando.CommandText = $"update Maceta set Humedad=0, Luz=0, EstadoHumedad=0, EstadoLuz=0, Fecha=0, Hora=0 where Id={id}";
             comando.ExecuteNonQuery();
-            comando.CommandText = $"update Planta set Nombre='Planta {id}', HumedadMinima=0, HumedadMaxima=0, LuzMinima=0, LuzMaxima=0, IDFamilia=0 where Id={id}";
+            comando.CommandText = $"update Planta set Nombre='Plant {id}', HumedadMinima=0, HumedadMaxima=0, LuzMinima=0, LuzMaxima=0, IDFamilia=0 where Id={id}";
             comando.ExecuteNonQuery();
             conexion.Close();
         }
